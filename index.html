@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Usuarios</title>
+</head>
+<body>
+    <div id="modificarUsuario"  style="display: none">
+        <h2>Modificar Usuario</h2>
+            <form id="modificarUsuarioForm">
+                <input type="text" id="nombre" placeholder="Nombre" required><br>
+                <input type="number" id="cuil" placeholder="CUIL" required><br>
+                <input type="number" id="tipo_usuario" placeholder="Tipo Usuario" required><br>
+                <select id="estado">
+                    <option value="1">Activo</option>
+                    <option value="0">Inactivo</option>
+                </select><br>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    <div id="agregarUusario" style="display: none">
+        <h2>Agregar Usuario</h2>
+            <form id="usuarioForm">
+                <input type="text" id="nombre" placeholder="Nombre" required><br>
+                <input type="number" id="cuil" placeholder="CUIL" required><br>
+                <input type="number" id="tipo_usuario" placeholder="Tipo Usuario" required><br>
+                <select id="estado">
+                    <option value="1">Activo</option>
+                    <option value="0">Inactivo</option>
+                </select><br>
+                <button type="submit">Enviar</button>
+            </form>
+    </div>
+    <button class="btn-agregar" onclick="ocultar()" >Agregar</button>
+    <div id="listadoUsuarios">
+        <h2>Usuarios</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>CUIL</th>
+                    <th>Tipo Usuario</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody id="tablaUsuarios">
+                <!-- Aquí se insertarán los datos dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <script src="./usuario.js"></script>
+</body>
+</html>
